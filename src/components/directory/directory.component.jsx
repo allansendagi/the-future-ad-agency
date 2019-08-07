@@ -11,7 +11,7 @@ class Directory extends React.Component {
 		this.state = {
 			sections: [{
 				title: 'THE FUTURE AD AGENCY',
-				imageUrl: 'https://images.unsplash.com/photo-1533069027836-fa937181a8ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+				imageUrl: '',
 				id: 1,
 				size: 'large',
 				linkUrl: 'blog',
