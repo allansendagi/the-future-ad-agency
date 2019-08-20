@@ -1,0 +1,12 @@
+.video-preview {
+  @import '~video-react/styles/scss/video-react';
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 20px 100px;
+
+  .preview {
+    display: flex;
+    justify-content: space-between;
+  }
+}

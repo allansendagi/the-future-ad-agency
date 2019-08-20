@@ -1,36 +1,42 @@
 import React from 'react';
 
-import HOMEPAGE_DATA from '../../homepage-data/homepage.data.js';
-import CollectionPreview from '../../components/collection-preview/collection-preview.component';
-
 import Directory from '../../components/directory/directory.component';
+import VIDEO_DATA from '../../homepage-data/video-data';
+
+import VideoPreview from '../../components/video-preview/video-preview.component';
+import Video from '../../components/player/player.component';
+
+
+
 
 import './homepage.styles.scss';
 
 class Homepage extends React.Component {
 	constructor() {
 		super()
+		
 		this.state = {
-			collections: HOMEPAGE_DATA
+			collections: VIDEO_DATA
 		}
  }
 
  render() {
- 	const { collections} = this.state;
+ 	const {collections} = this.state;
  	return (
- 	 	<div className='homepage'>
+ 		<div className='homepage'>
 		   <Directory />
-		   <div className='homepage-s'>
-		   		{
-		   			collections.map(({id, ...otherCollectionProps }) => (
-		   				<CollectionPreview key={id}  {...otherCollectionProps}/>
-		   			))
-		   		}
+		    <div className='home'>
+		     <Video />
+
+		    	{
+		      collections.map(({id, ...otherCollectionProps}) => (
+		      	<VideoPreview key={id} {...otherCollectionProps}/>
+		      ))
+		    }
 		   </div>
 	    </div>
     )
   }
-
 }
 
 
